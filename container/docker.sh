@@ -1,3 +1,4 @@
+#!/bin/bash
 docker pull wordpress
 docker pull phpmyadmin/phpmyadmin
 

@@ -4,7 +4,7 @@
 
 ###### Após baixar o repositório conceda permissão de execução aos arquivos .sh >>> chmod a+x filename.sh
 
-###1 - Módulo
+### 1 - Módulo
 
 #### [servidor mysql localhost](https://github.com/elnataoliveira/scripts_bootcamp_igti/tree/master/mysql "servidor mysql localhost")
 ###### - abra o arquivo mysqld.cnf 
@@ -13,4 +13,4 @@
 #### [container phpmyadmin](https://github.com/elnataoliveira/scripts_bootcamp_igti/tree/master/container "container phpmyadmin")
 #### [container wordpress](https://github.com/elnataoliveira/scripts_bootcamp_igti/tree/master/container "container wordpress")
 
-###2 - Módulo
+### 2 - Módulo

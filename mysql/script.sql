@@ -1,7 +1,8 @@
 /*source pwd/script.sql*/
 create user 'user'@'%';
 grant all privileges on *.* to 'user'@'%';
-alter user 'user'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
+/*alter user 'user'@'%' IDENTIFIED WITH mysql_native_password BY 'password';*/
+SET PASSWORD FOR 'bob'@'%' = PASSWORD('newpass');
 
 create database teste;
 use teste;

@@ -1,9 +1,12 @@
 #!/bin/bash
 docker pull wordpress
-docker pull phpmyadmin/phpmyadmin
-docker run  --restart=always --name phpmyadmin -d -e PMA_HOST=ip_host -p 8080:80 phpmyadmin/phpmyadmin
+docker pull phpmyadmin
+docker run  --restart=always --name apps -d UPLOAD_LIMIT=300M -e PMA_HOST=ip_host -p 8080:80 phpmyadmin 
+
 docker run  --restart=always --name wordpress -e WORDPRESS_DB_HOST=ip_host:3306 -p 8100:80 -e WORDPRESS_DB_USER=user -e WORDPRESS_DB_PASSWORD=password -d wordpress
 docker ps 
+
+sudo docker exec -i -t apps /bin/bash
 
 
 

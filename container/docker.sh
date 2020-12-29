@@ -1,7 +1,7 @@
 #!/bin/bash
 docker pull wordpress
 docker pull phpmyadmin
-docker run  --restart=always --name apps -d UPLOAD_LIMIT=300M -e PMA_HOST=ip_host -p 8080:80 phpmyadmin 
+docker run  --restart=always --name apps -d -e PMA_HOST=ip_host -p 80:80 -p 443:443 -p 22:22 phpmyadmin 
 
 docker run  --restart=always --name wordpress -e WORDPRESS_DB_HOST=ip_host:3306 -p 8100:80 -e WORDPRESS_DB_USER=user -e WORDPRESS_DB_PASSWORD=password -d wordpress
 docker ps 
@@ -16,6 +16,7 @@ $ docker run -d -P --name container01 image01
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 
+iptables -t nat -L -n
 
 Proxy
 

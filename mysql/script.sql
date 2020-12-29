@@ -17,3 +17,5 @@ create TABLE users (
 INSERT INTO `users` (`id`, `user`, `password`) VALUES (NULL, 'user1', 'pass1');
 INSERT INTO `users` (`id`, `user`, `password`) VALUES (NULL, 'user2', 'pass2');
 INSERT INTO `users` (`id`, `user`, `password`) VALUES (NULL, 'user3', 'pass3');
+
+https://lists.ubuntu.com/archives/ubuntu-users/2015-May/280738.html

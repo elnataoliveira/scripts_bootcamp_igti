@@ -8,6 +8,10 @@ docker ps
 
 sudo docker exec -i -t apps /bin/bash
 
+$ docker stop container01
+$ docker commit container01 image01
+$ docker rm container01
+$ docker run -d -P --name container01 image01
 
 
 Proxy

@@ -13,6 +13,9 @@ $ docker commit container01 image01
 $ docker rm container01
 $ docker run -d -P --name container01 image01
 
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+
 
 Proxy
 

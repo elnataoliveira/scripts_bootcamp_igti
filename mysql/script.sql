@@ -5,6 +5,8 @@ grant all privileges on *.* to 'user'@'%';
 SET PASSWORD FOR 'user'@'%' = PASSWORD('newpass');
 flush privileges;
 
+update 'user' set 'Host' = '%' where 'user'.'host' = 'locahost';
+https://www.digitalocean.com/community/tutorials/how-to-install-mariadb-on-ubuntu-18-04-pt
 restart mysql
 
 create database teste;

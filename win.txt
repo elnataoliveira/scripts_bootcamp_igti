@@ -1,6 +1,0 @@
-DISM /online /Get-CurrentEdition
-ServerDatacenter
-dism /online /set-edition:ServerDatacenter /productkey:48HP8-DN98B-MYWDG-T2DCC-8W83P /accepteula
-slmgr /ipk 7FPNW-Y38V7-T8T93-DKBHG-V49XP
-slmgr /skms kms.digiboy.ir
-slmgr.vbs /ato

@@ -17,4 +17,9 @@ mount 192.168.0.65:/compartilhamento /mnt/compartilhado
 cd /etc/
 vim fstab
 192.168.0.65:/compartilhamento /mnt/compartilhado nfs auto,nofail,noatime,nolock,intrntcp,actimeo=1800 0 0
+#montar diretorio
+mount -t cifs //servidor/compartilhamento -o username=usuario,password=senha /mnt/compartilhado
+
+https://lamasbr.github.io/2018/03/05/How-to-mount-Windows-shared-folders-cifs-or-smbfs-in-Linux.html
+
 

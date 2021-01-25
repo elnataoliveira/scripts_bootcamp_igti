@@ -7,6 +7,8 @@ apt install zabbix-frontend-php
 sudo apt install zabbix-apache-conf
 sudo apt install zabbix-agent
 
+references: https://www.zabbix.com/download
+
 
 
 

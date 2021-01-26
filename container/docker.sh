@@ -1,12 +1,13 @@
 #!/bin/bash
 docker pull wordpress
 docker pull phpmyadmin
+docker pull mariadb/server
 
-docker run  --restart=always --name apps -d -e PMA_HOST=ip_host -p 80:80 -p 443:443 -p 22:22 phpmyadmin 
-
+docker run  --restart=always --name apps -d -e PMA_HOST=ip_host -p 80:80 -p 443:443 -p 22:22 phpmyadmin
 docker run  --restart=always --name wordpress -e WORDPRESS_DB_HOST=ip_host:3306 -p 8100:80 -e WORDPRESS_DB_USER=user -e WORDPRESS_DB_PASSWORD=password -d wordpress
 
 docker run  --restart=always --name database-server -d -e MARIADB_ROOT_PASSWORD=passwd -p 3306:3306 -p 26:22 mariadb/server
+docker run  --restart=always --name application-server -d -e PMA_HOST=192.168.25.9:3306 -p 8080:80 -p 24:22 phpmyadmin
 
 docker ps 
 

@@ -12,6 +12,7 @@ sudo apt install zabbix-agent
 references: https://www.zabbix.com/download
 
 https://wiki.gentoo.org/wiki/Apache/pt-br
+https://stackoverflow.com/questions/43632553/htaccess-mod-rewrite-language-overrides
 
 
 

@@ -5,6 +5,9 @@ apt clean
 apt install default-mysql-server
 mysql -q -e "source $(pwd)/script.sql"
 
+nano /etc/systemd/system/mysqld.service
+<pre>max_open_files to more than 16384 (request: 32190)</pre>
+open_files_limit = 32190
 mysql_upgrade --user=root --password=pass**** --force
 #mysql tunner
 apt insssall mysqltuner

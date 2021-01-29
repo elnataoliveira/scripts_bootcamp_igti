@@ -1,4 +1,50 @@
 #!/bin/bash
+sudo vim /etc/network/interfaces
+
+allow-htoplug enp0s3
+	iface enp0s3 inet static
+	address 192.168.25.9
+	network 192.168.25.0
+	netmask 255.255.225.0
+	broadcast 192.168.25.255
+	gateway	192.168.25.1
+	dns-nameservers 192.168.25.9 192.168.25.1
+	
+	 sudo vim /etc/hosts
+	 127.0.1.1
+	 192.168.25.9 
+	 vim /etc/resolv.conf
+	 nameserver 192.18.25.9
+	 
+sudo vim /etc/hostname 
+
+ sudo service NetworkManager restart
+ hostname
+ hostname -f
+
+
+apt install samba krd5-config windind smbclient
+
+samba-tool domain provision
+cp /var/lib/samba/private/krb5.conf /etc/
+stop smbd
+disable smbd nmdb winbind
+systemctl umask samba-ad-dc
+systemctl start samba-ad-dc
+systemctl enable samba-ad-dc
+
+smbclient -L localhost -U%
+
+samba-tool user list
+
+samba-tool user create user
+samba-tools user setexpriry user --days=7
+
+
+
+
+
+#-------------------------#
 
 sudo apt install -y samba
 #service smbd status &

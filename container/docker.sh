@@ -34,6 +34,13 @@ mkdir /etc/systemd/system/docker.service.d
 Environment="HTTP_PROXY=http://proxy.example.com:80/"
 Environment="NO_PROXY=localhost,127.0.0.0/8,docker-registry.somecorporation.com"
 
+apt update
+<pre>Current default time zone: &apos;Etc/UTC&apos;
+Local time is now:      Fri Jan 29 13:51:46 UTC 2021.
+Universal Time is now:  Fri Jan 29 13:51:46 UTC 2021.
+Run &apos;dpkg-reconfigure tzdata&apos; if you wish to change it.
+</pre>
+
 $ sudo systemctl daemon-reload
 
 $ sudo systemctl show --property Environment docker

@@ -1,4 +1,5 @@
 #!/bin/bash
+#https://www.youtube.com/watch?v=E_GGg7Brx8Q
 sudo vim /etc/network/interfaces
 
 allow-htoplug enp0s3

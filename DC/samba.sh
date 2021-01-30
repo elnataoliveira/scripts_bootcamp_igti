@@ -24,7 +24,7 @@ sudo vim /etc/hostname
  hostname -f
 
 
-apt install samba krd5-config windind smbclient
+apt install samba krb5-config windind smbclient
 
 samba-tool domain provision
 cp /var/lib/samba/private/krb5.conf /etc/

@@ -25,12 +25,13 @@ sudo vim /etc/hostname
 
 
 apt install samba krb5-config winbind smbclient
+sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.bkp
 
 samba-tool domain provision
 cp /var/lib/samba/private/krb5.conf /etc/
-stop smbd
-disable smbd nmdb winbind
-systemctl umask samba-ad-dc
+systemctl stop smbd
+systemctl disable smbd nmdb winbind
+systemctl unmask samba-ad-dc
 systemctl start samba-ad-dc
 systemctl enable samba-ad-dc
 

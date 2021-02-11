@@ -11,6 +11,8 @@ docker run -d --name meucontainer -v /var/app imagem
 
 sudo docker run -d --restart=always --name application-server -e TZ="America/Bahia" -v /var/www/html:/var/www/html -p 80:80 -p 22:22 -p 443:443 ubuntu/apache2
 
+10051 10050
+
 Current default time zone: 'Etc/UTC'
 Local time is now:      Wed Feb 10 15:59:13 UTC 2021.
 Universal Time is now:  Wed Feb 10 15:59:13 UTC 2021.

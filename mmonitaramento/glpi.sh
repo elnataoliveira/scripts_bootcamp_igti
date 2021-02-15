@@ -1,7 +1,7 @@
 vim /etc/apache2/sites-avaliable/glpi.conf
 Alias /glpi /var/www/html/glpi
 <Directory /var/www/html/glpi>
-Options FollowSimlinks
+Options FollowSymLinks
 AllowOverride ALL
 Require all granted
 </Directory>
